@@ -9,7 +9,15 @@
 
 *{
     margin: 0;
-    padding: 0; 
+    padding: 0;
+    list-style: none;
+    text-decoration: none; 
+}
+
+:root{
+    --font-primary: 'Baloo Da 2', serif;
+    --font-secundary: 'Josefin Slab', serif;
+    --font-action: "Mulish", serif; 
 }
 
 /*- Formatação do HEADER -*/
@@ -53,7 +61,7 @@ header {
 .banner h1 {
     color: #fff;
     font-size: 3.5rem; /*root em = rem*/
-    font-family: 'Baloo Da 2', sans-serif;
+    font-family: var(--font-primary);
     font-weight: 300;
     text-shadow: 0.2rem 0.3rem 2px rgba(0, 0, 0, 0.5);
     line-height: 4rem;
@@ -63,7 +71,7 @@ header {
 }
 
 .banner p {
-    font-family: 'Josefin Slab', serif;
+    font-family: var(--font-secundary);
     color: #fff;
     font-size: 2rem;
     text-shadow: 0.15rem 0.2rem rgba(0, 0, 0, 0.3);
@@ -73,7 +81,7 @@ header {
 }
 
 .banner button {
-    font-family: "Mulish", serif;
+    font-family: var(--font-action);
     text-transform: uppercase;
     letter-spacing: .1rem;
     font-weight: 500;
@@ -99,4 +107,143 @@ header {
         transform: translateY(0) rotateY(0);
         opacity: 1;
     }
+}
+
+
+/*- Formatação do Menu de navegação -*/
+
+.sidebar {
+    width: 20rem;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: -20rem; /*aqui deixamos o menu para "fora da tela" */
+    transition: all 1s;
+}
+
+.show-menu .sidebar { /*da mesma forma que .hamburguer, .SIDEBAR herdará as propriedades de container quando tiver em si a classe .show-menu (incluida no javascript) */
+    right: 0;
+}
+
+.hamburguer {
+    /* background-color: red; */
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 100; /*- o número é alto mesmo para assegurar que esse elemento sempre seja mostrado a frente -*/
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+/* Aqui invertemos a ordem colocando show-menu como elemento pai de .hamburguer, pois está no container. .hamburguer vai herdar as caracteristicas de container quando tiver "show-menu" */
+.show-menu .hamburguer {
+    right: 16rem;
+}
+
+.line {
+    width: 100%;
+    background-color: #fff;
+    height: .1rem;
+    box-shadow: 0.1rem 0.1rem 1px #222;
+    transition: transform 1s;
+}
+
+.show-menu #line1 { /* a primeira linha rotaciona 45 graus(/) para formar o x de fechar */
+    transform: rotate(45deg) translate(.3rem, .45rem);
+    background-color: #555;
+    box-shadow: none;
+}
+
+.show-menu #line2 {
+    opacity: 0; /* elemento invisível*/
+    visibility: hidden; /* elemento ocultado */
+}
+
+
+.show-menu #line3{ /* a última linha rotaciona -45 graus(\) para formar o x de fechar */
+    transform: rotate(-45deg) translate(.3rem, -.45rem);
+    background-color: #555;
+    box-shadow: none;
+}
+
+.hamburguer span {
+    position: absolute;
+    left: 3rem;
+    background-color: #a044ff;
+    height: 2rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center; /*centraliza na horizontal */
+    align-items: center; /* centraliza na vertical */
+    color: #fff;
+    font-family: var(--font-action);
+    opacity: 0;
+}
+/* setinha que aponta para o x de fechar */
+.hamburguer span::before {
+    content: "";
+    position: absolute;
+    border-right: .5rem solid #a044ff;
+    border-top: .5rem solid transparent;
+    border-bottom: .5rem solid transparent;
+    border-left: .5rem solid transparent;
+    left: -1rem;
+}
+
+.show-menu .hamburguer:hover span {
+    opacity: 1;   
+}
+
+.menu {
+    position: absolute;
+    top: 40%;
+    left: 50%; /*texto deslocado em 50% a esquerda.*/
+    transform: translate(-50%, -50%); /*propriedade centraliza o elemento de forma fixa*/
+}
+
+.menu-item {
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.menu-link {
+    font-family: var(--font-action);
+    color: #555;
+    font-size: 2rem;
+}
+
+.menu-link:hover{
+    color: #6a3093;
+    font-weight: 500;
+    transition: all 1s;
+}
+
+.social-media {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly; /* distribui o espaço de maneira uniforme */
+}
+
+.social-media i {
+    background-color: #6a3093;
+    color: rgba(255, 255, 255, 1);
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* centraliza os elementos verticalmente */
+    border-radius: 50%;
+    transition: background-color 1s;
+}
+
+.social-media i:hover{
+    background-color: #a044ff;
 }
