@@ -15,6 +15,10 @@
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth; /*- Essa propriedade suaviza a rolagem da página -*/
+}
+
 :root {
     --font-primary: 'Baloo Da 2', serif;
     --font-secundary: 'Josefin Slab', serif;
@@ -138,6 +142,7 @@ header {
     right: -20rem;
     /*aqui deixamos o menu para "fora da tela" */
     transition: all 1s;
+    z-index: 150;
 }
 
 .show-menu .sidebar {
@@ -150,7 +155,7 @@ header {
     width: 2rem;
     height: 2rem;
     position: fixed;
-    z-index: 100;
+    z-index: 200;
     /*- o número é alto mesmo para assegurar que esse elemento sempre seja mostrado a frente -*/
     right: 2rem;
     top: 2rem;
@@ -283,7 +288,7 @@ header {
     background-color: #a044ff;
 }
 
-/*- Formatação da sessão conhecimentos -*/
+/*- Formatação da sessão CONHECIMENTOS -*/
 
 .sessao-conhecimentos {
     background-color: #f5f5f5;
@@ -378,7 +383,7 @@ header {
     width: 100%; /*aqui a imagem ocupará a largura total da div */
 }
 
-/*- Formatação da sessão projetos -*/
+/*- Formatação da sessão-PROJETOS -*/
 
 .projetos {
     display: flex;
@@ -478,7 +483,7 @@ header {
     transition: all 1s;
 }
 
-/*- Formatação da sessao-contato -*/
+/*- Formatação da SESSÃO-CONTATO -*/
 
 .sessao-contato {
     width: 100%;
@@ -586,7 +591,7 @@ header {
     font-weight: 500;
     height: 2.5rem;
 }
-/*- Formatação da section orçamento -*/
+/*- Formatação da SESSÃO-ORÇAMENTO -*/
 
 .sessao-orcamento {
     width: 100%;
@@ -633,9 +638,9 @@ header {
 }
 
 .sessao-orcamento label {
-    font-family: var(--font-secundary);
+    font-family: var(--font-action);
     font-size: 1.5rem;
-    font-weight: bold;
+    color: #222;
 }
 
 .sessao-orcamento input[type="number"] {
@@ -646,6 +651,7 @@ header {
     outline: none;
     border: 1px solid #636363;
     padding: 0.3rem;
+    margin-left: 0.7rem;
 }
 
 .sessao-orcamento input[type="checkbox"] {
@@ -653,6 +659,7 @@ header {
     height: 1.2rem;
     outline: none;
     border: 1px solid #636363;
+    margin-left: 0.7rem;
 }
 
 .sessao-orcamento input[type="radio"] {
@@ -675,6 +682,7 @@ header {
     outline: none;
     margin: 0 auto; /* centralizei o botao */
     transition: all 1s;
+    letter-spacing: 0.07rem;
 }
 
 .btn-orcamento:hover {
@@ -682,3 +690,75 @@ header {
     width: 100%;
     font-size: 1.2rem;
 }
+
+/*- Formatação do FOOTER -*/
+
+footer {
+    width: 100%;
+    height: 7rem;
+    background-color: #17181b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content { 
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content p {
+    font-family: var(--font-secundary);
+    color: #a7a7a7;
+    font-size: 1.2rem;
+}
+
+.social-list a {
+    margin: 0 2rem;
+    color: #a7a7a7;
+    font-size: 1.3rem;
+}
+
+.social-list ul {
+    display: flex;
+}
+
+#link-topo {
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    width: 3rem;
+    height: 3rem;
+    background: #6a3093;
+    background: -webkit-linear-gradient(to right, #a044ff, #6a3093);
+    background: linear-gradient(to left, #a044ff, #6a3093);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: .4rem;
+    box-shadow: 0.1rem 0.1rem 0.4rem rgba(0, 0, 0, 0.5);
+    transition: width 0.2s, height 0.2s;
+}
+
+i.fas, .fa-arrow-up { /*- melhoria implementada na setinha -*/
+    font-size: 1.3rem;
+}
+
+#link-topo:hover {
+    background: #6a3093;
+    background: -webkit-linear-gradient(to left, #a044ff, #6a3093);
+    background: linear-gradient(to right, #a044ff, #6a3093);
+}
+
+#link-topo:active {
+    width: 2.9rem;
+    height: 2.9rem;  
+}
+
+
+
+
+
+
