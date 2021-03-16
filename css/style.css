@@ -84,7 +84,7 @@ header {
     animation: moveBanner 0.7s forwards;
 }
 
-.banner button {
+.banner .btn {
     font-family: var(--font-action);
     text-transform: uppercase;
     letter-spacing: .1rem;
@@ -105,7 +105,7 @@ header {
     animation: moveBanner 0.9s forwards;
 }
 
-.banner button:hover {
+.banner .btn:hover {
     padding: 1.5rem 3rem;
     background: #6a3093;
     /* navegadores antigos */
@@ -158,12 +158,14 @@ header {
     flex-direction: column;
     justify-content: space-evenly;
     cursor: pointer;
+
 }
 
 /* Aqui invertemos a ordem colocando show-menu como elemento pai de .hamburguer, pois está no container. .hamburguer vai herdar as caracteristicas de container quando tiver "show-menu" */
 
 .show-menu .hamburguer {
     right: 16rem;
+    transition: right 1.1s ease 0.2s;
 }
 
 .line {
@@ -455,7 +457,7 @@ header {
     background: linear-gradient(to right, #a044ff, #6a3093);
 }
 
-.card-info button {
+.card-info .btn {
     width: 8rem;
     height: 2.5rem;
 }
@@ -470,7 +472,7 @@ header {
     opacity: 0.2;
 }
 
-.card-info button:hover { /* Essa melhoria eu implementei*/
+.card-info .btn:hover { /* Essa melhoria eu implementei*/
     font-weight: 500;
     width: 10rem;
     transition: all 1s;
@@ -498,7 +500,7 @@ header {
     width: 35%;
     background: /* gradiente cinza aplicado na imagem de fundo */
         linear-gradient(rgba(15,15,15,0.6),rgba(22,22,22, 0.9)),
-        url(../img/contato.jpg); 
+        url("../img/contato.jpg"); 
     background-size: cover;
 }
 
@@ -583,4 +585,100 @@ header {
     width: 100%;
     font-weight: 500;
     height: 2.5rem;
+}
+/*- Formatação da section orçamento -*/
+
+.sessao-orcamento {
+    width: 100%;
+    height: 100vh;
+    background: url("/img/bg-orcamento.jpg");
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orcamento-wrapper {
+    width: 60%;
+    height: 80%;
+    background: #ddd; /* o parametro 99 colocado após a cor branca informa a opacidade do elemento */
+    border-radius: 10px;
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 1);
+    position: relative;
+    opacity: 0.9;
+}
+
+.sessao-orcamento h1 {
+    position: absolute;
+    top: -2.5rem;
+    left: 2rem;
+    background: #6a3093;
+    background: -webkit-linear-gradient(to right, #a044ff, #6a3093);
+    background: linear-gradient(to left, #a044ff, #6a3093);
+    padding: 0 3rem;
+    color: #fff;
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    font-weight: lighter;
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+    border-radius: 10px;    
+}
+
+.sessao-orcamento form {
+    margin: 4rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+.sessao-orcamento label {
+    font-family: var(--font-secundary);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.sessao-orcamento input[type="number"] {
+    border-radius: 4px;
+    font-family: var(--font-secundary);
+    width: 4rem;
+    font-size: 2rem;
+    outline: none;
+    border: 1px solid #636363;
+    padding: 0.3rem;
+}
+
+.sessao-orcamento input[type="checkbox"] {
+    width: 1.2rem;
+    height: 1.2rem;
+    outline: none;
+    border: 1px solid #636363;
+}
+
+.sessao-orcamento input[type="radio"] {
+    width: 1rem;
+    height: 1rem;
+    margin: 0.7rem;
+    outline: none;
+}
+
+.sessao-orcamento input[type="range"] {
+    outline: none;
+}
+
+.btn-orcamento {
+    text-transform: uppercase;
+    padding: 1rem;
+    cursor: pointer;
+    grid-column: 2;
+    width: 80%;
+    outline: none;
+    margin: 0 auto; /* centralizei o botao */
+    transition: all 1s;
+}
+
+.btn-orcamento:hover {
+    font-weight: 500;
+    width: 100%;
+    font-size: 1.2rem;
 }

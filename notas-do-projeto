@@ -4,3 +4,11 @@ LIVE SERVER - Atualiza automaticamente o navegador assim que alterarmos o docume
 AUTO CLOSE TAG (fechamento automatico de tags);
 GIT LENS - Visualiza quando o código foi alterado.
 HIGHLIGHT MATCHING TAG - marca a abertura e o fechamento da tag.
+
+
+1 - O botão de fechar que aparece quando o menu é aberto agora se arrasta para a esquerda na abertura da sidebar, porém temos que descobrir uma maneira de fazer com que ele também se arraste para a direita após um segundo clique.
+2 - A sessão de formulário teve problemas com o deslocamento do label quando o input recebe o FOCUS. Se não houver como consertar, devemos trocar o tipo do label.
+3 - Achar uma solução para o layout não quebrar quando ativado o zoom out. Mantendo todos os elementos proporcionais.
+4 - Aplicar media queries em todas as seções do site.
+5 - Refatorar o código para facilitar a manutenção do site.
+
