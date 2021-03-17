@@ -12,4 +12,10 @@ HIGHLIGHT MATCHING TAG - marca a abertura e o fechamento da tag.
 4 - Aplicar media queries em todas as seções do site.
 5 - Refatorar o código para facilitar a manutenção do site.
 6 - O menu do site quando aberto foi resolvido colocando um z-index alto para sobrepor os demais elementos. Mas pode ficar melhor se descobrirmos uma forma de encaixa-lo junto aos outros elementos da página quando ativado.
-
+7 Na sessão de orçamento: 
+    - Quando a página é recarregada, a barra de prazo deve marcar sempre o prazo de 10 semanas.
+    - Descobrir uma maneira de, ao termos prazo mínimo, imprima na página a palavra "semana" ao invés de semanas. 
+    - Devemos ter uma opção de limpar todos os campos, para um novo orçamento. 
+    - Devemos descobrir um modo de tornar obrigatório o input de informações importantes para dar imprimir a resposta na tela.
+    - Impedir o usuário de colocar tipo de caracteres diferentes daqueles que o input precise receber, abrindo uma popup informando.
+    

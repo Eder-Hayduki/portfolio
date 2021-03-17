@@ -660,6 +660,7 @@ header {
     outline: none;
     border: 1px solid #636363;
     margin-left: 0.7rem;
+    margin-top: 0.4rem;
 }
 
 .sessao-orcamento input[type="radio"] {
