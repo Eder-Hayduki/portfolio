@@ -291,7 +291,7 @@ header {
 /*- Formatação da sessão CONHECIMENTOS -*/
 
 .sessao-conhecimentos {
-    background-color: #f5f5f5;
+    background-color: #f2f2f2;
 }
 
 .sessao-header {
@@ -388,6 +388,7 @@ header {
 .projetos {
     display: flex;
     justify-content: space-evenly;
+    height: 80vh;
 }
 
 .card {
@@ -484,7 +485,7 @@ header {
 }
 
 /*- Formatação da SESSÃO-CONTATO -*/
-
+    
 .sessao-contato {
     width: 100%;
     height: 100vh;
@@ -492,28 +493,30 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-}  
+}
 
 .contato-wrapper {
-    width: 60%;
+    width: 70%;
     display: flex;
-    height: 35rem;
-    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.5)
+    height: 30rem;
+    box-shadow: 0.1rem 2rem 3rem rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
 }
 
-.contato-left {
+.contato-esq {
     width: 35%;
-    background: /* gradiente cinza aplicado na imagem de fundo */
-        linear-gradient(rgba(15,15,15,0.6),rgba(22,22,22, 0.9)),
-        url("../img/contato.jpg"); 
+    background: 
+        linear-gradient(rgba(15,15,15,0.6),rgba(22,22,22,0.9)),
+        url("../img/contato.jpg");
     background-size: cover;
+    border-radius: 0.5rem 0rem 0rem 0.5rem;
 }
 
-.contato-right {
+.contato-dir {
     width: 65%;
     background-color: #eee;
     padding: 1rem 3rem 3rem 3rem;
-
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
 }
 
 .sessao-contato h1 {
@@ -525,72 +528,91 @@ header {
     text-align: center;
 }
 
-.sessao-contato form { /*- CONSERTAR FORMULARIO QUE N DEU CERTO -*/
+.sessao-contato form {
     width: 100%;
-    display: flex; /*coloca o input, o label e o button em linha */
-    flex-direction: column; /* com essa regra coloca dispoe input label e button como em colunas */
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-/* - campos de texto */
-
-.input-group {
+.grupo-input {
     position: relative;
 }
 
-.input-group textarea {
-    padding-top: 1rem;
+.campo {
+    background: transparent;
+    border: none;
+    width: 25rem;
+    font-size: 1.3rem;
+    font-family: var(--font-secundary);
+    border-bottom: 1px dashed #636363;
+    height: 2rem;
+    outline: none;
+    margin: 1.5rem 0;
+}
+
+.grupo-input textarea {
+    padding-top: 0.5rem;
     max-width: 25rem;
     max-height: 3rem;
+    resize: none;    
 }
 
-.field {
-    background: transparent;
-    border: 1px solid blue;
-    width: 20rem;
-    font-size: 1.5rem;
-    font-family: var(--font-secundary);
-    border-bottom: 2px dashed #636363;
-    height: 3rem;
-    outline: none;
-    margin-left: 2rem 0;
-    margin: 2rem 0;
-}
-
-.field-label {
+.campo-label {
     position: absolute;
     left: 0;
-    margin-top: 2rem;
-    font-size: 1.2rem;
     font-family: var(--font-secundary);
     text-transform: uppercase;
+    top: 2rem;
+    font-size: 1.2rem;
     transition: all 0.5s;
 }
 
-.field:focus {
-    border-bottom: solid 1px; 
+.campo:focus {
+    border-bottom: 1px solid #272727;
 }
 
-.field:focus — label{
-    font-size: 1rem;
-    margin-top: 0;
+.campo:focus ~ label { /*quando há caracteres digitados dentro do input com ele selecionado */
+    top: 0;
+    font-size: 1.1rem;
 }
 
-.btn-submit {
+.campo:valid ~ label { /*quando há caracteres dentro do input sem ele estar selecionado (acompanha o required) */
+    top: 0;
+    font-size: 1.1rem;
+}
+
+.aviso {
+    position: absolute;
+    top: 3.7rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #4b4b4b;
+    font-family: var(--font-action);
+    left: 0;
+}
+
+.grupo-input:last-of-type > .aviso { /*seleciona somente o .aviso do terceiro grupo-input */
+    top: 4.2rem;
+}
+
+.btn-enviar {
+    width: 80%;
+    height: 2.5rem;
+    padding: 0.5rem 1.6rem;
     text-transform: uppercase;
-    font-family: var();
+    letter-spacing: 0.05rem;
     font-size: 1.2rem;
-    width: 50%;
-    height: 2rem;
     transition: all 0.7s;
-    margin-top: 1rem;
+    font-weight: 300;
+    margin-top: 2rem;
 }
 
-.btn-submit:hover {
+.btn:hover {
     width: 100%;
     font-weight: 500;
-    height: 2.5rem;
 }
+
 /*- Formatação da SESSÃO-ORÇAMENTO -*/
 
 .sessao-orcamento {

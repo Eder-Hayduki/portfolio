@@ -180,33 +180,39 @@
             </div><!-- /projetos -->
         </section>
         <!--/sessao-projetos -->
-        <section class="sessao-contato" id="contato">
+
+        <section class="sessao-contato">
             <div class="contato-wrapper">
-                <div class="contato-left"></div>
-                <div class="contato-right">
+                <div class="contato-esq"></div>
+                <div class="contato-dir">
                     <h1>Contato</h1>
                     <form>
-                        <div class="input-group">
-                            <input type="text" id="nome" class="field">
-                            <label for="nome" class="field-label">Nome</label>
+                        <div class="grupo-input">
+                            <input type="text" class="campo" id="nome" required data-ls-module="charCounter" maxlength="40" tabindex="1">
+                            <label for="nome" class="campo-label">Nome</label>
+                            <span class="aviso">Máximo 40 caracteres</span>
                         </div>
-                        <div class="input-group">
-                            <input type="text" id="email" class="field">
-                            <label for="email" class="field-label">E-mail</label>
+                        <div class="grupo-input">
+                            <input type="text" class="campo" id="email" required tabindex="2">
+                            <label for="email" class="campo-label" maxlength="40" >E-mail</label>
+                            <span class="aviso">Máximo 40 caracteres</span>
                         </div>
-                        <div class="input-group">
-                            <textarea id="mensagem" class="field"></textarea>
-                            <label for="mensagem" class="field-label">Mensagem</label>
+                        <div class="grupo-input">
+                            <textarea name="mensagem" id="mensagem" class="campo" maxlength="100" required tabindex="3"></textarea>
+                            <label for="mensagem" class="campo-label">Mensagem</label>
+                            <span class="aviso">Máximo 100 caracteres</span>
                         </div>
-                        <button type="submit" class="btn btn-submit">Enviar</button>
+                        <button type="submit" class="btn btn-enviar">Enviar</button>
                     </form>
-                </div><!-- /.contato-right -->
-            </div><!-- /.contato-wrapper -->
+                </div>
+            </div>
         </section>
+
+        <!-- sessao-orcamento -->
         <section class="sessao-orcamento" id="orcamento">
             <div class="orcamento-wrapper">
                 <h1>Faça um Orçamento</h1>
-                <form>
+                <form action="#" method="post">
                     <label for="qtde">Quantidade de páginas</label>
                     <input type="number" min="1" name="qtde" id="qtde">
                     <label for="js">Preciso de um Script JS</label>
@@ -223,7 +229,7 @@
                         </div>
                     </div>
                     <label for="prazo">Prazo</label>
-                    <input type="range" name="prazo" id="prazo" min="1" max ="10">
+                    <input type="range" name="prazo" id="prazo" min="1" max="10">
                     <label id="preco">R$ 0,00</label>
                     <button class="btn btn-orcamento" type="submit">Enviar</button>
                 </form>
@@ -253,6 +259,7 @@
                 </div>
             </div>
         </footer>
+        <!-- botão link-topo  -->
         <a href="#home" id="link-topo">
             <i class="fas fa-arrow-up"></i>
         </a>
