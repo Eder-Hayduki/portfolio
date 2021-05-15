@@ -18,4 +18,4 @@ HIGHLIGHT MATCHING TAG - marca a abertura e o fechamento da tag.
     - Devemos ter uma opção de limpar todos os campos, para um novo orçamento. 
     - Devemos descobrir um modo de tornar obrigatório o input de informações importantes para dar imprimir a resposta na tela.
     - Impedir o usuário de colocar tipo de caracteres diferentes daqueles que o input precise receber, abrindo uma popup informando.
-    
+    - Transformar o display grid mantendo um espaçamento de 2 colunas.
