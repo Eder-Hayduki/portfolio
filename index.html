@@ -8,6 +8,8 @@
     <title>Eder Hayduki - Web Designer</title>
     <!-- códigos do favicon para plataformas diversas -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media-md.css">
+    <link rel="stylesheet" href="css/media-sm.css">
     <link rel="stylesheet" href="css/media-xs.css">
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
@@ -30,7 +32,7 @@
             <div class="banner">
                 <h1>Web Developer & Front End Designer</h1>
                 <p>Eder Luiz Hayduki</p>
-                <button class="btn saiba-mais">Saiba mais</button>
+                <button class="btn saiba-mais" tabindex="1">Saiba mais</button>
                 <!-- conversão para uppercase via css  -->
             </div>
         </header>
@@ -201,23 +203,23 @@
                     <h1>Contato</h1>
                     <form method="POST" action="https://formspree.io/f/xbjqklpp">
                         <div class="grupo-input">
-                            <input type="text" class="campo" id="nome" required maxlength="40" tabindex="1">
+                            <input type="text" class="campo" id="nome" required maxlength="40" tabindex="2">
                             <label for="nome" class="campo-label">Nome</label>
                             <span class="erro"></span>
                         </div>
                         <div class="grupo-input">
-                            <input type="email" class="campo" id="email" required tabindex="2">
+                            <input type="email" class="campo" id="email" required tabindex="3">
                             <label for="email" class="campo-label" maxlength="40">E-mail</label>
                             <span class="erro"></span>
                         </div>
                         <div class="grupo-input">
                             <textarea name="mensagem" id="mensagem" class="campo" maxlength="150" required
-                                tabindex="3"></textarea>
+                                tabindex="4"></textarea>
                             <label for="mensagem" class="campo-label">Mensagem</label>
                             <span class="erro"></span>
                             <span class="aviso">Número de caracteres: 150</span>
                         </div>
-                        <button type="submit" tabindex="4" class="btn btn-enviar">Enviar</button>
+                        <button type="submit" tabindex="5" class="btn btn-enviar">Enviar</button>
                     </form>
                 </div>
             </div>
@@ -228,24 +230,24 @@
                 <h1>Faça um Orçamento</h1>
                 <form action="https://formspree.io/f/xbjqklpp" method="POST">
                     <label for="qtde">Quantidade de páginas</label>
-                    <input type="number" min="1" name="qtde" id="qtde">
+                    <input type="number" tabindex="6" min="1" name="qtde" id="qtde">
                     <label for="js">Preciso de um Script JS</label>
-                    <input type="checkbox" name="js" id="js">
+                    <input type="checkbox" tabindex="7" name="js" id="js">
                     <label>Layout</label>
                     <div class="group-layout">
                         <div>
-                            <input type="radio" name="layout" id="layout-sim">
+                            <input type="radio" tabindex="8" name="layout" id="layout-sim">
                             <label for="layout-sim">Eu preciso de um layout</label>
                         </div>
                         <div>
-                            <input type="radio" name="layout" id="layout-nao">
+                            <input type="radio" tabindex="9" name="layout" id="layout-nao">
                             <label for="layout-nao">Já tenho um layout</label>
                         </div>
                     </div>
                     <label for="prazo">Prazo</label>
-                    <input type="range" name="prazo" id="prazo" min="1" max="10" value="10">
+                    <input type="range" name="prazo" id="prazo" min="1" max="10" value="10" tabindex="10">
                     <label id="preco">R$ 0,00</label>
-                    <button class="btn btn-orcamento" type="submit">Enviar</button>
+                    <button class="btn btn-orcamento" type="submit" tabindex="11">Enviar</button>
                 </form>
             </div>
         </section>

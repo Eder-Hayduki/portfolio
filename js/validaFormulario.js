@@ -66,6 +66,7 @@ for (campo of campos) {
     });
     campo.addEventListener("blur", validacaoCustomizada);
     campo.addEventListener("change", validacaoCustomizada);
+
 }
 
 //coloca um listener no botão do form

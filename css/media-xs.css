@@ -8,7 +8,7 @@
             min-width: 320px;
         }
     /*=================================
-    FORMATAÇÃO DA HEADER
+    FORMATAÇÃO DA HOME
     ===================================*/
         
         .img-wrapper {
@@ -176,6 +176,10 @@
         /* quando o campo está em focus */
         .campo:focus~label {
             font-size: 1rem;
+        }
+
+        .grupo-input:last-of-type>.erro.active {
+            top: 4.8rem;
         }
     
         /*=================================
