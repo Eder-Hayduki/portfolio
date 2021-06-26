@@ -476,7 +476,7 @@ FORMATAÇÃO DA SESSÃO PROJETOS
     cursor: pointer;
 }
 
-.btn a:hover {
+.btn a{
     color: #fff;
     transition: color .5s;
 }
