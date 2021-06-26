@@ -476,6 +476,11 @@ FORMATAÇÃO DA SESSÃO PROJETOS
     cursor: pointer;
 }
 
+.btn a:hover {
+    color: #fff;
+    transition: color .5s;
+}
+
 .btn:hover {
     background: #6a3093;
     background: -webkit-linear-gradient(to left, #a044ff, #6a3093);
