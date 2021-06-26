@@ -16,10 +16,12 @@
 }
 
 html {
-    scroll-behavior: smooth; /*- Essa propriedade suaviza a rolagem da página -*/
+    scroll-behavior: smooth;
+    /*- Essa propriedade suaviza a rolagem da página -*/
 }
 
-:root { /*- Criação de variaveis que ficam em escopo global -*/
+:root {
+    /*- Criação de variaveis que ficam em escopo global -*/
     --font-primary: 'Baloo Da 2', cursive;
     --font-secundary: 'Josefin Slab', serif;
     --font-action: "Mulish", sans-serif;
@@ -41,16 +43,17 @@ header {
     background-color: rgba(0, 0, 0, 0.8)
 }
 
- .img-wrapper img {
+.img-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     /* imagem encaixa no img-wrapper */
     opacity: 0.5;
     animation: zoom 25s;
-} 
+}
 
-@keyframes zoom { /*- efeito zoom out -*/
+@keyframes zoom {
+    /*- efeito zoom out -*/
     0% {
         transform: scale(1.3);
     }
@@ -150,7 +153,7 @@ header {
 .show-menu .sidebar {
     /*da mesma forma que .hamburguer, .SIDEBAR herdará as propriedades de container quando tiver em si a classe .show-menu (incluida no javascript) */
     right: 0;
-    box-shadow: -2px 0 6px rgba(0, 0, 0, 0.3); 
+    box-shadow: -2px 0 6px rgba(0, 0, 0, 0.3);
     /*sombra externa quando aparece o menu */
 }
 
@@ -221,7 +224,7 @@ header {
     /* centraliza na vertical */
     color: #fff;
     font-family: var(--font-action);
-    opacity: 0; 
+    opacity: 0;
 }
 
 /* setinha que aponta para o x de fechar */
@@ -304,7 +307,7 @@ FORMATAÇÃO DA SESSÃO CONHECIMENTOS
 .sessao-header {
     display: flex;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;
 }
 
 .sessao-header h1 {
@@ -328,7 +331,7 @@ FORMATAÇÃO DA SESSÃO CONHECIMENTOS
 
 .habilidade:nth-child(1) {
     grid-column: 3 / 7;
-    grid-row: 1 / 3; 
+    grid-row: 1 / 3;
 }
 
 .habilidade:nth-child(2) {
@@ -357,8 +360,10 @@ FORMATAÇÃO DA SESSÃO CONHECIMENTOS
 }
 
 .habilidade-header {
-    display: flex; /*posiciona o (i) e o (h3) lado a lado*/
-    align-items: center; /*- centralização vertical -*/
+    display: flex;
+    /*posiciona o (i) e o (h3) lado a lado*/
+    align-items: center;
+    /*- centralização vertical -*/
     color: #4b4b4b;
 }
 
@@ -386,8 +391,10 @@ FORMATAÇÃO DA SESSÃO CONHECIMENTOS
 }
 
 .habilidades-img-wrapper img {
-    object-fit: cover; /*esta propriedade faz com que a imagem que é maior(em largura) que a div se limite ao tamanho da div */
-    width: 100%; /*aqui a imagem ocupará a largura total da div */
+    object-fit: cover;
+    /*esta propriedade faz com que a imagem que é maior(em largura) que a div se limite ao tamanho da div */
+    width: 100%;
+    /*aqui a imagem ocupará a largura total da div */
 }
 
 /*=================================
@@ -397,14 +404,13 @@ FORMATAÇÃO DA SESSÃO PROJETOS
 .projetos {
     display: flex;
     justify-content: space-evenly;
-    height: 100vh;
+    height: 75vh;
 }
 
 .card {
     width: 18rem;
     height: 24rem;
     position: relative;
-    margin-top: 5%;
 }
 
 .card-img-wrapper {
@@ -428,8 +434,10 @@ FORMATAÇÃO DA SESSÃO PROJETOS
     bottom: 0;
     padding: 2rem;
     text-shadow: 0.3rem 0.2rem 0.3rem rgba(0, 0, 0, .4);
-    opacity: 0; /*-invisível-*/
-    visibility: hidden; /*-oculto-*/
+    opacity: 0;
+    /*-invisível-*/
+    visibility: hidden;
+    /*-oculto-*/
     transition: all .5s;
 }
 
@@ -465,6 +473,7 @@ FORMATAÇÃO DA SESSÃO PROJETOS
     border-radius: .5rem;
     border: none;
     box-shadow: 0 .1rem .8rem rgba(0, 0, 0, .4);
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -477,7 +486,9 @@ FORMATAÇÃO DA SESSÃO PROJETOS
     width: 8rem;
     height: 2.5rem;
 }
+
 /* Mouse Over nos cards*/
+
 .card:hover .card-info {
     bottom: 2rem;
     opacity: 1;
@@ -488,7 +499,8 @@ FORMATAÇÃO DA SESSÃO PROJETOS
     opacity: 0.2;
 }
 
-.card-info .btn:hover { /* Essa melhoria eu implementei*/
+.card-info .btn:hover {
+    /* Essa melhoria eu implementei*/
     font-weight: 500;
     width: 10rem;
     transition: all 1s;
@@ -497,7 +509,7 @@ FORMATAÇÃO DA SESSÃO PROJETOS
 /*=================================
 FORMATAÇÃO DA SESSÃO CONTATO
 ===================================*/
-    
+
 .sessao-contato {
     width: 100%;
     height: 100vh;
@@ -517,9 +529,7 @@ FORMATAÇÃO DA SESSÃO CONTATO
 
 .contato-esq {
     width: 35%;
-    background: 
-        linear-gradient(rgba(15,15,15,0.6),rgba(22,22,22,0.9)),
-        url("../img/contato.jpg");
+    background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(22, 22, 22, 0.9)), url("../img/contato.jpg");
     background-size: cover;
     border-radius: 0.5rem 0rem 0rem 0.5rem;
 }
@@ -564,10 +574,9 @@ FORMATAÇÃO DA SESSÃO CONTATO
 }
 
 .grupo-input textarea {
-    padding-top: 0.5rem;
     max-width: 25rem;
-    max-height: 3rem;
-    resize: none;    
+    max-height: 5rem;
+    resize: none;
 }
 
 .campo-label {
@@ -584,18 +593,20 @@ FORMATAÇÃO DA SESSÃO CONTATO
     border-bottom: 1px solid #272727;
 }
 
-.campo:focus ~ label { /*quando há caracteres digitados dentro do input com ele selecionado */
+.campo:focus~label {
+    /*quando há caracteres digitados dentro do input com ele selecionado */
     top: 0;
     font-size: 1.1rem;
     color: #6a3093;
     font-weight: bold;
 }
 
-.campo:valid ~ label { /*quando há caracteres dentro do input sem ele estar selecionado (acompanha o required) */
+.campo:valid~label {
+    /*quando há caracteres dentro do input sem ele estar selecionado (acompanha o required) */
     top: 0;
     font-size: 1.1rem;
     color: #6a3093;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 .aviso {
@@ -603,15 +614,17 @@ FORMATAÇÃO DA SESSÃO CONTATO
     top: 3.7rem;
     font-size: 0.7rem;
     font-weight: 600;
-    color: #4b4b4b;
+    color: #6a3093;
     font-family: var(--font-action);
     left: 0;
 }
+
 /*seleciona somente o .aviso do terceiro grupo-input */
 
-.grupo-input:last-of-type > .aviso {
-    top: 4.2rem;
+.grupo-input:last-of-type>.aviso {
+    top: 3.7rem;
 }
+
 /*- Mensagem quando aparece a class erro -*/
 
 .erro.active {
@@ -624,9 +637,9 @@ FORMATAÇÃO DA SESSÃO CONTATO
     font-weight: 500;
 }
 
-.grupo-input:last-of-type > .erro.active {
-    top: 4.3rem;
-} 
+.grupo-input:last-of-type>.erro.active {
+    top: 3.8rem;
+}
 
 .btn-enviar {
     width: 80%;
@@ -637,7 +650,7 @@ FORMATAÇÃO DA SESSÃO CONTATO
     font-size: 1.2rem;
     transition: all 0.7s;
     font-weight: 300;
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
 .btn-enviar:hover {
@@ -662,7 +675,8 @@ FORMATAÇÃO DA SESSÃO ORÇAMENTO
 .orcamento-wrapper {
     width: 60%;
     height: 80%;
-    background: #ddd; /* o parametro 99 colocado após a cor branca informa a opacidade do elemento */
+    background: #ddd;
+    /* o parametro 99 colocado após a cor branca informa a opacidade do elemento */
     border-radius: 10px;
     box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 1);
     position: relative;
@@ -682,7 +696,7 @@ FORMATAÇÃO DA SESSÃO ORÇAMENTO
     font-size: 3rem;
     font-weight: lighter;
     box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
-    border-radius: 10px;    
+    border-radius: 10px;
 }
 
 .sessao-orcamento form {
@@ -737,7 +751,8 @@ FORMATAÇÃO DA SESSÃO ORÇAMENTO
     grid-column: 2;
     width: 80%;
     outline: none;
-    margin: 0 auto; /* centralizei o botao */
+    margin: 0 auto;
+    /* centralizei o botao */
     transition: all 1s;
     letter-spacing: 0.07rem;
 }
@@ -761,7 +776,7 @@ footer {
     justify-content: center;
 }
 
-.footer-content { 
+.footer-content {
     width: 60%;
     display: flex;
     justify-content: space-between;
@@ -805,7 +820,8 @@ FORMATAÇÃO DO BOTÃO LINK-TOPO
     transition: width 0.2s, height 0.2s;
 }
 
-i.fas, .fa-arrow-up { /*- melhoria implementada na setinha -*/
+i.fas, .fa-arrow-up {
+    /*- melhoria implementada na setinha -*/
     font-size: 1.3rem;
 }
 
@@ -817,7 +833,7 @@ i.fas, .fa-arrow-up { /*- melhoria implementada na setinha -*/
 
 #link-topo:active {
     width: 2.9rem;
-    height: 2.9rem;  
+    height: 2.9rem;
 }
 
 /*====================
@@ -825,7 +841,7 @@ i.fas, .fa-arrow-up { /*- melhoria implementada na setinha -*/
 =====================*/
 /*- parte externa da modal -*/
 .modal-container { 
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background: rgba(0, 0, 0, 0.5);
     position: fixed;
@@ -842,42 +858,55 @@ i.fas, .fa-arrow-up { /*- melhoria implementada na setinha -*/
     background: white;
     width: 60%;
     min-width: 16rem;
-    padding: 40px;
     border: 10px solid #6a3093;
     box-shadow: 0 0 0 10px #fff; 
     /*Borda externa a borda declarada acima com box-shadow*/
     position: relative;
+    display: flex;
+    height: 400px;
 }
 
-/*- Elementos internos da modal -*/
+.img-modal {
+    background-size: cover;
+    width: 50%;
+}
 
-.modal h3 {
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.content-modal {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-modal h2 {
     font-family: var(--font-primary);
-    font-size: 2.5rem;
+    font-size: 200%;
+    text-align: center;
+    padding: 3% 0;
     color: #6a3093;
-    top: 0;
 }
 
-.modal .input {
-    padding: 5px;
-    margin-top: 20px;
-    width: 70%;
-    border: 1px solid #444;
-    border-radius: 4px;
-    outline: none;
+.content-modal p {
+    width: 84%;
+    font-family: var(--font-secundary);
+    font-size: 1.1em;
+    font-weight: 600;
+    line-height: 1.25rem;
+    color: #272727;
 }
 
-.modal .input:focus {
-    outline: none;
-}
-
-.modal .botao {
-    padding: 5px 20px;
-    margin-left: 2%;
-    background-color: #6a3093;
-    color: #fff;
-    border-radius: 4px;
-    letter-spacing: 0.01rem;
+.content-modal .btn-modal {
+    width: 64%;
+    margin-top: 5%;
+    padding: 2% 0;
+    text-transform: uppercase;
+    font-size: 1.2rem; 
 }
 
 /* animação transição de modal */
@@ -914,14 +943,10 @@ i.fas, .fa-arrow-up { /*- melhoria implementada na setinha -*/
     cursor: pointer;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
     font-size: 1.2rem;
+    
 }
 
 /*- div class modal-container e mostrar -*/
 .modal-container.mostrar {   
     display: flex;
 }
-
-
-
-
-

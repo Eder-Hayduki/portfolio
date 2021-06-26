@@ -1,0 +1,325 @@
+@media (max-width: 576px) {
+
+    /*=================================
+    FORMATAÇÃO DA CONTAINER
+    ===================================*/
+    
+        .container {
+            min-width: 320px;
+        }
+    /*=================================
+    FORMATAÇÃO DA HEADER
+    ===================================*/
+        
+        .img-wrapper {
+            width: 100%;
+            max-width: 576px;
+            height: 100vh;
+        }
+        .img-wrapper img {
+            object-fit: cover;
+            width: 100%;
+            max-width: 576px;
+            height: 100%;
+        }
+        .banner {
+            width: 80%;
+            left: 10%;
+            right: 10%;
+            top: 20%;
+        }
+        .banner h1 {
+            font-size: 250%;
+            line-height: 125%;
+            margin: 2.5%;
+        }
+        .banner h2 {
+            font-size: 125%;
+            margin-bottom: 0.25rem;
+            margin: 2.5%;
+        }
+        .banner button {
+            padding: 0.5rem 0;
+            margin: 2.5% 1% 2.5% 2.5%;
+            width: 70%;
+        }
+        /*=================================
+        FORMATAÇÃO DO MENU DE NAVEGAÇÃO
+        ===================================*/
+    
+        .sidebar {
+            width: 100%;
+            right: -100%;
+        }
+        .show-menu .sidebar {
+            box-shadow: none;
+        }
+
+        .hamburguer {
+            top: 8%;
+            right: 8%;
+        }
+    
+        .show-menu .hamburguer {
+            right: 80%;
+        }
+    
+    
+        /*=================================
+        FORMATAÇÃO DA SESSÃO CONHECIMENTOS
+        ===================================*/
+        .sessao-header h1 {
+            font-size: 200%;
+        }
+        .conhecimentos {
+            display: grid;
+            grid-template-columns: repeat(11, 1fr);
+            grid-template-rows: repeat(auto-fit, minmax(4rem, 1fr));
+            row-gap: 0.5rem;
+        }
+        /*espaçamento entre ultimo elemento e o final da página */
+        .conhecimentos:last-child {
+            padding-bottom: 3%;
+        }
+        .habilidade:nth-child(1) {
+            grid-row: 3/5;
+            grid-column: 4/10;
+        }
+        .habilidade:nth-child(2) {
+            grid-row: 5/7;
+            grid-column: 4/10;
+        }
+        .habilidade:nth-child(3) {
+            grid-row: 7/9;
+            grid-column: 4/10;
+        }
+        .habilidade:nth-child(4) {
+            grid-row: 9/11;
+            grid-column: 4/10;
+        }
+        .habilidade:nth-child(5) {
+            grid-row: 11/13;
+            grid-column: 4/10;
+        }
+        .habilidade:nth-child(6) {
+            grid-row: 13/15;
+            grid-column: 4/10;
+        }
+        /*- Formatação interna habilidades -*/
+        .habilidades-img-wrapper {
+            display: none;
+        }
+        .habilidade-header i {
+            font-size: 2rem;
+            margin-top: 3%;
+        }
+        .habilidade-header h3 {
+            font-size: 1.5rem;
+            margin-top: 4%;
+        }
+        .habilidade-text {
+            padding: 3%;
+            font-size: 1rem;
+            line-height: 1rem;
+            padding-bottom: 1rem;
+        }
+        /*=================================
+        FORMATAÇÃO DA SESSÃO PROJETOS
+        ===================================*/
+        .sessao-header h1 {
+            font-size: 250%;
+        }
+        /*------------------------------*/
+        .projetos {
+            display: block;
+            height: auto;
+            padding: 5% 0 5%;
+        }
+        
+        .card {
+            margin: 0 auto;
+            display: flex;
+            max-width: 240px;
+            margin-bottom: 5%;
+        }
+        /*O ultimo filho não recebe margem inferior pois já existe */
+        .card:last-child {
+            margin-bottom: 0;
+        }
+        /*=================================
+        FORMATAÇÃO DA SESSÃO CONTATO
+        ===================================*/
+        .contato-wrapper {
+            width: 85%;
+        }
+        .contato-esq {
+            display: none;
+        }
+        .contato-dir {
+            border-radius: 0.5rem;
+            width: 100%;
+            padding: 0 3%;
+        }
+        .sessao-contato h1 {
+            font-size: 250%;
+        }
+        .grupo-input {
+            width: 94%;
+        }
+        .campo {
+            /* tamanho dos campos de texto */
+            width: 100%;
+        }
+        .campo-label {
+            font-size: 1.1rem;
+        }
+        /* quando o campo está em focus */
+        .campo:focus~label {
+            font-size: 1rem;
+        }
+    
+        /*=================================
+        FORMATAÇÃO DA SESSAO-ORCAMENTO
+        ===================================*/
+    
+        .sessao-orcamento {
+            padding: 15% 0;
+        }
+        .orcamento-wrapper {
+            width: 90%;
+            height: 100%;
+        }
+        .sessao-orcamento h1 {
+            font-size: 150%;
+            top: -4.5%;
+            width: 86%;
+            left: 2%;
+            padding: 5%;
+            text-align: center;
+        }
+        .sessao-orcamento form {
+            grid-template-rows: auto 1fr;
+            grid-template-columns: repeat(autofit, minmax(2rem, 1fr));
+            row-gap: 1rem;
+            margin: 0;
+            padding: 22.5% 5% 0;
+            column-gap: 0.5rem;
+        }
+        .sessao-orcamento label {
+            font-size: 1.1rem;
+            padding: 3% 0;
+        }
+        .sessao-orcamento input[type="number"] {
+            font-size: 1.5rem;
+            align-items: center;
+            height: 2rem;
+        }
+        .sessao-orcamento input[type="checkbox"] {
+            margin-top: 1.2rem
+        }
+        .group-layout {
+            grid-column: 1/-1;
+        }
+        .sessao-orcamento label[for="prazo"] {
+            grid-column: 1/2;
+        }
+        /*label do preço do orçamento*/
+        .sessao-orcamento #preco {
+            grid-column: 1/2;
+        }
+        /*barra range*/
+        .sessao-orcamento #prazo {
+            grid-column: 1/-1;
+        }
+        .btn-orcamento {
+            grid-column: 1/-1;
+            
+        }
+        
+        /*=================================
+        FORMATAÇÃO DO FOOTER
+        ===================================*/
+        
+        footer {
+            padding: 0.5rem 0;
+            flex-direction: column;
+        }
+        
+        .footer-content {
+            display: block;
+            width: 100%;
+        }
+    
+        .footer-content p {
+            font-size: 1rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+    
+        .social-list {
+            width: 100%;
+            margin: 0;
+            margin-bottom: 1rem;
+        }
+    
+        .social-list ul {
+            justify-content: space-evenly;
+        }
+    
+        /*===============================
+            FORMATAÇÃO DO BOTÃO LINK-TOPO
+        ===============================*/
+        #link-topo {
+            width: 2rem;
+            height: 2rem;
+            bottom: 8%;
+            right: 8%;
+            padding: 1%;
+        }
+    
+        i.fas, .fa-arrow-up {
+            /*- melhoria implementada na setinha -*/
+            font-size: 1rem;
+        }
+    
+        /*===============================
+            FORMATAÇÃO DA MODAL
+        ===============================*/
+        .modal {
+            width: 80%;
+            border: 5px solid #6a3093;
+            box-shadow: 0 0 0 8px #fff;
+        }
+        .img-modal {
+            display: none;
+        }
+    
+        .content-modal {
+            width: 100%;
+            justify-content: space-evenly;
+        }
+    
+        .content-modal h2 {
+            font-size: 150%;
+            margin: 0;
+        }
+    
+        .content-modal p {
+            font-size: 1rem;
+            line-height: 1.1rem;
+            width: 92%;
+        }
+    
+        .content-modal .btn-modal {
+            width: 80%;
+            font-size: 1rem;
+            margin: 5% 0;
+        }
+        .fechar {
+            width: 38px;
+            height: 38px;
+            top: -23px;
+            right: -23px; 
+        }
+    
+    }

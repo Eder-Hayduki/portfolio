@@ -70,6 +70,5 @@ for (campo of campos) {
 
 //coloca um listener no botão do form
 document.querySelector("form").addEventListener("submit", event => {
-    //console.log("Enviar o Formulário");
-    event.preventDefault();
+    //event.preventDefault();
 });
