@@ -3,8 +3,9 @@ document.querySelector(".hamburguer").addEventListener("click", () =>
    document.querySelector(".container").classList.toggle("show-menu")
     );
 
-//script da sessão de orçamento
 
+//script da sessão de orçamento
+ 
 document.querySelector("#qtde").addEventListener("change", atualizarPreco);
 document.querySelector("#js").addEventListener("change", atualizarPreco);
 document.querySelector("#layout-sim").addEventListener("change", atualizarPreco);
