@@ -245,7 +245,7 @@ header {
 
 .menu {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     /*texto deslocado em 50% a esquerda.*/
     transform: translate(-50%, -50%);
@@ -380,8 +380,7 @@ FORMATAÇÃO DA SESSÃO CONHECIMENTOS
 .habilidade-text p {
     font-family: var(--font-secundary);
     margin-top: 1rem;
-    /* line-height: 1.2rem; decidir se implementa essas melhorias de layout
-    font-weight: 600; */
+    line-height: 1.2rem; 
 }
 
 .habilidades-img-wrapper {
@@ -401,16 +400,21 @@ FORMATAÇÃO DA SESSÃO CONHECIMENTOS
 FORMATAÇÃO DA SESSÃO PROJETOS
 ===================================*/
 
+.sessao-projetos {
+    max-width: 1400px;
+}
+
 .projetos {
     display: flex;
     justify-content: space-evenly;
-    height: 75vh;
+    height: auto;
 }
 
 .card {
-    width: 18rem;
-    height: 24rem;
+    width: 28%;
+    height: 25rem;
     position: relative;
+    margin: 3% 0;
 }
 
 .card-img-wrapper {
@@ -431,8 +435,8 @@ FORMATAÇÃO DA SESSÃO PROJETOS
 
 .card-info {
     position: absolute;
-    bottom: 0;
-    padding: 2rem;
+    top: 0;
+    padding: 15%;
     text-shadow: 0.3rem 0.2rem 0.3rem rgba(0, 0, 0, .4);
     opacity: 0;
     /*-invisível-*/
@@ -709,7 +713,7 @@ FORMATAÇÃO DA SESSÃO ORÇAMENTO
     display: grid;
     grid-template-columns: auto 1fr;
     column-gap: 2rem;
-    row-gap: 2rem;
+    row-gap: 1.5rem;
 }
 
 .sessao-orcamento label {
@@ -873,7 +877,7 @@ i.fas, .fa-arrow-up {
 
 .img-modal {
     background-size: cover;
-    width: 50%;
+    width: 35%;
 }
 
 img {
@@ -883,7 +887,7 @@ img {
 }
 
 .content-modal {
-    width: 50%;
+    width: 65%;
     display: flex;
     flex-direction: column;
     align-items: center;

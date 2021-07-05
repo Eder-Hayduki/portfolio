@@ -8,9 +8,11 @@
     <title>Eder Hayduki - Web Designer</title>
     <!-- códigos do favicon para plataformas diversas -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media-md.css">
-    <link rel="stylesheet" href="css/media-sm.css">
-    <link rel="stylesheet" href="css/media-xs.css">
+    <link rel="stylesheet" href="css/media-queries/media-xs.css">
+    <link rel="stylesheet" href="css/media-queries/media-sm.css">
+    <link rel="stylesheet" href="css/media-queries/media-md.css">
+    <link rel="stylesheet" href="css/media-queries/media-lg.css">
+    <link rel="stylesheet" href="css/media-queries/media-xl.css">
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/imgfavicon-16x16.png">
@@ -43,7 +45,7 @@
                         <a href="#home" class="menu-link">Home</a>
                     </li>
                     <li class="menu-item">
-                        <a href="#conhecimentos" class="menu-link">Conhecimento</a>
+                        <a href="#conhecimentos" class="menu-link">Conhecimentos</a>
                     </li>
                     <li class="menu-item">
                         <a href="#projetos" class="menu-link">Projetos</a>
@@ -193,8 +195,7 @@
                     </div>
                 </div><!-- /card -->
             </div><!-- /projetos -->
-        </section>
-        <!--/sessao-projetos -->
+        </section><!--/sessao-projetos -->
 
         <section class="sessao-contato" id="contato">
             <div class="contato-wrapper">
@@ -250,7 +251,7 @@
                     <button class="btn btn-orcamento" type="submit" tabindex="11">Enviar</button>
                 </form>
             </div>
-        </section>
+        </section><!-- /sessao-orcamento -->
         <footer>
             <div class="footer-content">
                 <p>Copyright &copy; 2020 Todos os direitos reservados</p>
@@ -279,7 +280,7 @@
         <a href="#home" id="link-topo">
             <i class="fas fa-arrow-up"></i>
         </a>
-    </div>
+    </div><!-- /container -->
     <!-- modal -->
     <div class="modal-container" id="modal-promocao">
         <div class="modal">
@@ -295,15 +296,15 @@
                     ênfase em front-end.</p>
                 <p> No botão abaixo, deixo um currículo criativo, no qual eu deixarei maiores detalhes sobre minhas
                     informações, habilidades experiências profissionais etc.</p>
-                <button class="btn btn-modal"><a href="./img/curriculo-criativo.jpg" download> Baixar Curriculo</a></button>
-            </div>
-        </div>
-    </div>
+                <button class="btn btn-modal"><a href="./img/curriculo-criativo.pdf" download> Baixar Curriculo</a></button>
+            </div><!-- /content-modal -->
+        </div><!-- modal-promocao -->
+    </div><!-- /modal-container -->
 </body>
 <script src="js/script.js"></script>
 <script src="js/modal.js"></script>
 <script src="js/validaFormulario.js"></script>
-<script src="js/contaCaracteres.js" defer></script>
+<script src="js/contaCaracteres.js"></script>
 
 
 </html>

@@ -1,0 +1,110 @@
+@media (min-width: 993px) and (max-width: 1037px) {
+    
+    /*=====================================
+        FORMATAÇÃO DA SESSAO CONHECIMENTOS
+    =======================================*/
+
+    .menu {
+        top: 50%;
+    }
+    
+    /*=====================================
+        FORMATAÇÃO DA SESSAO CONHECIMENTOS
+    =======================================*/
+    .habilidades-img-wrapper {
+        display: none;
+    }
+    /*===============================
+        FORMATAÇÃO DA SESSA-ORCAMENTO
+    ===============================*/
+
+    .sessao-orcamento {
+        padding: 10% 0 6.5%;
+    }
+
+    .orcamento-wrapper {
+        width: 80%;
+        height: 100%;
+    }
+
+    .sessao-orcamento h1 {
+        font-size: 250%;
+        top: -6.5%;
+        width: 90%;
+        left: 5%;
+        padding: 1% 0;
+        text-align: center;
+    }
+
+    .sessao-orcamento form {
+        grid-template-rows: auto 1fr;
+        grid-template-columns: repeat(autofit, minmax(2rem, 1fr));
+        row-gap: 0.6rem;
+        margin: 0;
+        padding: 13% 5% 0;
+        column-gap: 0.5rem;
+    }
+
+    .sessao-orcamento label {
+        font-size: 1.3rem;
+        padding: 3% 0;
+    }
+
+    .sessao-orcamento input[type="number"] {
+        font-size: 1.5rem;
+        align-items: center;
+        height: 2rem;
+    }
+
+    .sessao-orcamento input[type="checkbox"] {
+        margin-top: 0.7rem;
+    }
+
+    .sessao-orcamento #prazo {
+        grid-column: 1/-1;
+    }
+
+    .btn-orcamento {
+        grid-column: 1/-1;
+        margin-top: 1%;
+    }
+
+    /*===============================
+        FORMATAÇÃO DO FOOTER
+    ===============================*/
+    .footer-content {
+        width: 70%;
+    }
+    .social-list {
+        justify-content: space-evenly;
+    }
+    /*===============================
+        FORMATAÇÃO DO LINK-TOPO
+    ===============================*/
+    #link-topo {
+        bottom: 8%;
+        right: 6%;
+    }
+    i.fas, .fa-arrow-up {
+        /*- melhoria implementada na setinha -*/
+        font-size: 1.2rem;
+    }
+    /*===============================
+        FORMATAÇÃO DA MODAL
+    ===============================*/
+    .img-modal {
+        background-size: cover;
+        width: 35%;
+    }
+    .content-modal {
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .content-modal p {
+        width: 90%;
+        font-size: 1.1em;
+        line-height: 1.25rem;
+    }
+}
